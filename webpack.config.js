@@ -78,14 +78,14 @@ module.exports = (env) => ({
     new MiniCssExtractPlugin({
       filename: "[name]-[hash].css",
     }),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.resolve(__dirname, "./src/images/"),
-    //       to: path.resolve(__dirname, "./dist/images"),
-    //     },
-    //   ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "./src/images/"),
+          to: path.resolve(__dirname, "./dist/images"),
+        },
+      ],
+    }),
   ],
   optimization: {
     minimizer: [

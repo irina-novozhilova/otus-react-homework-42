@@ -1,13 +1,7 @@
-import React from 'react';
+import React from "react";
 
 interface ParagraphProps {
-    text: string;
+  text: string;
 }
 
-export const Paragraph = ({...props}: ParagraphProps) => {
-    return (
-        <p>
-            {props.text}
-        </p>
-    );
-};
+export const Paragraph = ({ ...props }: ParagraphProps) => <p>{props.text}</p>;

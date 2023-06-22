@@ -1,13 +1,17 @@
-import React from 'react';
+import React from "react";
+import "./Image.css";
 
 interface ImageProps {
-    src: string;
-    alt?: string;
-    title?: string;
+  src: string;
+  alt?: string;
+  title?: string;
 }
 
-export const Image = ({...props}: ImageProps) => {
-    return (
-        <img data-testid='image-test' alt={props.alt} src={props.src} title={props.title} />
-    );
-};
+export const Image = ({ ...props }: ImageProps) => (
+  <img
+    data-testid="image-test"
+    alt={props.alt}
+    src={props.src}
+    title={props.title}
+  />
+);

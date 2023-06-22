@@ -1,33 +1,24 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Image } from './Image';
+import { Image } from "./Image";
+
+// @ts-ignore
+import imageFile from "./image.jpeg";
 
 const meta = {
-  title: 'Header',
+  title: "Image",
   component: Image,
-  tags: ['autodocs'],
-  argTypes: {
-    size: {
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
-      control: { type: 'radio' },
-    },
-  },
+  tags: ["autodocs"],
 } satisfies Meta<typeof Image>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Heading: Story = {
+export const ImageComponent: Story = {
   args: {
-    size: 'h1',
-    text: 'Heading Title',
+    src: imageFile,
+    alt: "Loki",
+    title: "Loki Image",
   },
 };
-
-
-
-
-
-
-
